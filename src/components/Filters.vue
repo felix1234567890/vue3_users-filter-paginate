@@ -1,15 +1,16 @@
 <template>
   <div class="sortBy">
     <span>Sort by </span>
-    <Select @input="sort($event)" :options="options" class="select-filter" />
+    <SelectComponent @input="sort($event)" :options="options" class="select-filter" />
   </div>
 </template>
 <script>
 import Select from './Select';
-import { defineComponent } from 'vue';
-export default defineComponent({
+
+export default {
+  name:'FilterComponent',
   components: {
-    Select,
+    SelectComponent:Select,
   },
   props: {
     sort: Function,
@@ -26,7 +27,7 @@ export default defineComponent({
     ];
     return { options };
   },
-});
+}
 </script>
 <style scoped>
 .sortBy span {

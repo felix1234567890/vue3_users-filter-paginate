@@ -9,6 +9,7 @@
         v-for="(option, i) of options"
         :key="i"
         @click="
+         console.log(option)
           selected = option.label;
           open = false;
           $emit('input', option);
@@ -20,9 +21,10 @@
   </div>
 </template>
 <script>
-import { defineComponent, reactive, computed, toRefs, onMounted, onUnmounted } from 'vue';
+import {  reactive, computed, toRefs, onMounted, onUnmounted } from 'vue';
 
-export default defineComponent({
+export default {
+  name:'SelectComponent',
   props: {
     options: {
       type: Array,
@@ -54,7 +56,7 @@ export default defineComponent({
 
     return { ...toRefs(state) };
   },
-});
+}
 </script>
 <style scoped lang="scss">
 $body-background-color: #212a38;

@@ -15,9 +15,9 @@
   </div>
 </template>
 <script>
-import { defineComponent } from "vue";
 
-export default defineComponent({
+export default {
+  name: 'PaginationComponent',
   props: {
     pageCount: {
       type: Number
@@ -26,7 +26,7 @@ export default defineComponent({
     increaseNumber: Function,
     decreaseNumber: Function
   }
-});
+}
 </script>
 <style scoped>
 .buttons {

@@ -16,9 +16,9 @@
 <script>
 import UserItem from './UserItem';
 import { useStore } from 'vuex';
-import { computed, ref, defineComponent } from 'vue';
+import { computed, ref } from 'vue';
 
-export default defineComponent({
+export default {
   props: {
     users: {
       type: Array,
@@ -36,7 +36,7 @@ export default defineComponent({
       loading,
     };
   },
-});
+}
 </script>
 <style lang="scss">
 .container {

@@ -14,9 +14,7 @@
   </article>
 </template>
 <script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
+export default {
   props: {
     name: String,
     email: String,
@@ -25,7 +23,7 @@ export default defineComponent({
     gender: String,
     age: Number
   }
-});
+}
 </script>
 <style>
 .card {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header :search="handleSearch" />
-    <filters :sort="handleSortByAge" />
+    <header-component :search="handleSearch" />
+    <Filters :sort="handleSortByAge" />
     <UsersList :users="shownUsers" />
     <Pagination
       :pageCount="pageCount"
@@ -23,7 +23,7 @@ import UsersList from "./components/UsersList";
 export default {
   name: "App",
   components: {
-    Header,
+    HeaderComponent: Header,
     Filters,
     UsersList,
     Pagination

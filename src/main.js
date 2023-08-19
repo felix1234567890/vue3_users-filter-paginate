@@ -1,10 +1,8 @@
-import { createApp } from 'vue';
-import store from './store';
-import App from './App.vue';
-import './style.scss';
+import { createApp } from "vue";
+import store from "./store";
+import App from "./App.vue";
+import "./style.scss";
+store.dispatch("loadUsers");
 
-store.dispatch('loadUsers');
-
-createApp(App)
-  .use(store)
-  .mount('#app');
+const app = createApp(App);
+app.use(store).mount("#app");
